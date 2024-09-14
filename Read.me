@@ -1,0 +1,66 @@
+Dice Game
+Overview
+This project is a simple web-based dice game that randomly generates and displays two dice images, one for each player. The game determines the winner based on the dice roll and displays the result on the page.
+
+Files
+index.html: The HTML file containing the structure and layout of the dice game.
+java.js: The JavaScript file that handles the functionality of the dice rolls and game logic.
+styles.css: (Assumed) The CSS file for styling the dice game.
+Setup Instructions
+Download the Project Files
+
+Ensure you have downloaded or cloned the following files:
+
+index.html
+java.js
+styles.css (if applicable)
+Images for the dice located in the images directory (e.g., dice0.png, dice1.png, etc.)
+Check File Paths
+
+Verify that the paths specified in your HTML and JavaScript files are correct.
+
+JavaScript Path:
+
+Open index.html and ensure the path to java.js is correct. The script tag in index.html should look like this:
+
+html
+Copy code
+<script src="./java.js"></script>
+Ensure that java.js is in the same directory as index.html. If it is in a different directory, update the path accordingly.
+
+Image Paths:
+
+Ensure the images for the dice are located in the images directory and that the file names match those referenced in the JavaScript file. For example:
+
+javascript
+Copy code
+var c = "images/" + "dice" + String(random1) + ".png";
+var c1 = "images/" + "dice" + String(random2) + ".png";
+Ensure the images directory contains files like dice0.png, dice1.png, etc.
+
+Open the HTML File
+
+Open index.html in a web browser to view and interact with the dice game.
+
+How It Works
+Dice Roll Simulation:
+
+The JavaScript file (java.js) generates two random numbers to simulate dice rolls.
+These random numbers are used to select dice images from the images directory.
+Displaying Results:
+
+The chosen dice images are set as the source for the <img> elements in the HTML.
+The JavaScript then compares the dice rolls to determine the winner and updates the <h1> element with the result.
+Example
+When the page is loaded, the JavaScript will randomly assign images to each player's dice and display the result as either "Player 1 wins", "Player 2 wins", or "Draw" based on the dice rolls.
+
+Troubleshooting
+Dice Images Not Showing: Ensure that the dice images are correctly placed in the images directory and that the file names match those referenced in java.js.
+
+JavaScript Not Loading: Check the browser’s developer console for errors. Ensure that the path to java.js is correct and that the file exists at the specified location.
+
+Contribution
+If you would like to contribute to this project, please fork the repository and submit a pull request with your changes. Follow the project's coding guidelines for contributions.
+
+License
+This project is licensed under the MIT License.
